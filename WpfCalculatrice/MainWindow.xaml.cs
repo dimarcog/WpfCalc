@@ -30,7 +30,7 @@ namespace WpfCalculatrice
             addition = new Addition(0, 0);
             soustraction = new Soustraction(0, 0);
             multiplication = new Multiplication(0, 0);
-            division = new Division(0, 0);
+           division = new Division(0, 0);
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -82,9 +82,9 @@ namespace WpfCalculatrice
             {
                 if (double.TryParse(tbxNumber2.Text, out dblNumber2))
                 {
-                    multiplication.setVal1(22);
-                    multiplication.setVal2(33);
-                    lblResponse.Content = multiplication.Multiplier();
+                    multiplication.setV1(dblNumber1);
+                    multiplication.setV2(dblNumber2);
+                    lblResponse.Content = multiplication.Multiplit();
                 }
             }
             else
