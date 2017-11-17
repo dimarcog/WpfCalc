@@ -22,21 +22,15 @@ namespace WpfCalculatrice
     {
         private Addition addition;
         private Soustraction soustraction;
+        private Multiplication multiplication;
+        private Division division;
         public MainWindow()
         {
             InitializeComponent();
             addition = new Addition(0, 0);
-<<<<<<< HEAD
             soustraction = new Soustraction(0, 0);
-<<<<<<< HEAD
-
-=======
             multiplication = new Multiplication(0, 0);
-           division = new Division(0, 0);
-=======
             division = new Division(0, 0);
->>>>>>> 95929fdb7433b8f74609f181fb0ccd4a225d6380
->>>>>>> 1590f0a92b9324409f8d8efba5636507c2767274
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -48,8 +42,8 @@ namespace WpfCalculatrice
             {
                 if (double.TryParse(tbxNumber2.Text, out dblNumber2))
                 {
-                    addition.setVal1(22);
-                    addition.setVal2(33);
+                    addition.setVal1(dblNumber1);
+                    addition.setVal2(dblNumber2);
                     lblResponse.Content = addition.Additionne();
                 }
             }
@@ -61,8 +55,9 @@ namespace WpfCalculatrice
 
         private void btnSub_Click(object sender, RoutedEventArgs e)
         {
+            double dblNumber1;
+            double dblNumber2;
 
-<<<<<<< HEAD
             if (double.TryParse(tbxNumber1.Text, out dblNumber1))
             {
                 if (double.TryParse(tbxNumber2.Text, out dblNumber2))
@@ -76,16 +71,14 @@ namespace WpfCalculatrice
             {
                 MessageBox.Show("Veuillez contrôler le format des nombres saisies !", "Conversion", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-=======
->>>>>>> 1590f0a92b9324409f8d8efba5636507c2767274
+
         }
 
         private void btnMul_Click(object sender, RoutedEventArgs e)
         {
+            double dblNumber1;
+            double dblNumber2;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             if (double.TryParse(tbxNumber1.Text, out dblNumber1))
             {
                 if (double.TryParse(tbxNumber2.Text, out dblNumber2))
@@ -99,16 +92,14 @@ namespace WpfCalculatrice
             {
                 MessageBox.Show("Veuillez contrôler le format des nombres saisies !", "Conversion", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-=======
->>>>>>> 95929fdb7433b8f74609f181fb0ccd4a225d6380
->>>>>>> 1590f0a92b9324409f8d8efba5636507c2767274
+
         }
 
         private void btnDiv_Click(object sender, RoutedEventArgs e)
         {
+            double dblNumber1;
+            double dblNumber2;
 
-<<<<<<< HEAD
-=======
             if (double.TryParse(tbxNumber1.Text, out dblNumber1))
             {
                 if (double.TryParse(tbxNumber2.Text, out dblNumber2))
@@ -122,7 +113,7 @@ namespace WpfCalculatrice
             {
                 MessageBox.Show("Veuillez contrôler le format des nombres saisies !", "Conversion", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
->>>>>>> 1590f0a92b9324409f8d8efba5636507c2767274
+
         }
     }
 }
